@@ -18,7 +18,7 @@
 #SBATCH --tasks-per-node=1 
 #################
 #memory per node; default is 4000 MB per CPU
-#SBATCH --mem=1G
+#SBATCH --mem=2G
 #################
 
 # Have SLURM send you an email when the job ends or fails, careful, the email could end up in your clutter folder
@@ -27,6 +27,6 @@
 #SBATCH --mail-type=END,FAIL # notifications for job done & fail
 #SBATCH --mail-user=logan.b.smith@vanderbilt.edu
 
-module load GCC Python
+module load Anaconda3
 module load Pysam
 python split_2a.py -b possorted_bam_chr21.bam -o1 1.bam -o2 2.bam -d . -p 0.1
