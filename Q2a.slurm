@@ -27,6 +27,7 @@
 #SBATCH --mail-type=END,FAIL # notifications for job done & fail
 #SBATCH --mail-user=logan.b.smith@vanderbilt.edu
 
-module load Anaconda3
-module load Pysam
+#load Pysam with all dependencies
+module load GCC/6.4.0-2.28 Python/3.6.3 Pysam/0.15.2
+#run requested script
 python split_2a.py -b possorted_bam_chr21.bam -o1 1.bam -o2 2.bam -d . -p 0.1
