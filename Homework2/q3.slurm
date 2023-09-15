@@ -1,13 +1,13 @@
 #!/bin/bash 
 
 #set a job name  
-#SBATCH --job-name=q2
+#SBATCH --job-name=q3
 #################  
 #a file for job output, you can check job progress
-#SBATCH --output=q2.out
+#SBATCH --output=q3.out
 #################
 # a file for errors from the job
-#SBATCH --error=q2.err
+#SBATCH --error=q3.err
 ################
 #time you think you need; default is 2 hours
 #format could be dd-hh:mm:ss, hh:mm:ss, mm:ss, or mm
