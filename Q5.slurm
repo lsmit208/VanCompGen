@@ -6,9 +6,6 @@
 #################  
 #a file for job output
 #SBATCH --output=Q5.out
-#################
-# a file for errors from the job
-#SBATCH --error=Q5.err
 ################
 #format could be dd-hh:mm:ss, hh:mm:ss, mm:ss, or mm
 #SBATCH --time=30
