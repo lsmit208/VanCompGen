@@ -25,7 +25,7 @@
 #SBATCH --cpus-per-task=4 # 4 threads per task 
 #################
 #memory per node; default is 4000 MB per CPU
-#SBATCH --mem=6G
+#SBATCH --mem=16G
 #################
 
 # Have SLURM send you an email when the job ends or fails, careful, the email could end up in your clutter folder
