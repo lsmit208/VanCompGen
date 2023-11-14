@@ -13,7 +13,7 @@
 ################
 #time you think you need; default is 2 hours
 #format could be dd-hh:mm:ss, hh:mm:ss, mm:ss, or mm
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #################
 #quality of service; think of it as job priority
 # We are submitting to the dev partition, there are several on sherlock: normal, gpu, owners, hns, bigmem (jobs requiring >64Gigs RAM) 
@@ -22,9 +22,10 @@
 #number of nodes you are requesting
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1 
+#SBATCH --cpus-per-task=4 # 4 threads per task 
 #################
 #memory per node; default is 4000 MB per CPU
-#SBATCH --mem=5G
+#SBATCH --mem=6G
 #################
 
 # Have SLURM send you an email when the job ends or fails, careful, the email could end up in your clutter folder
