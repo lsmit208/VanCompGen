@@ -22,10 +22,10 @@
 #number of nodes you are requesting
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1 
-#SBATCH --cpus-per-task=4 # 4 threads per task 
+#SBATCH --cpus-per-task=2 # 2 threads per task 
 #################
 #memory per node; default is 4000 MB per CPU
-#SBATCH --mem=16G
+#SBATCH --mem=32G
 #################
 
 # Have SLURM send you an email when the job ends or fails, careful, the email could end up in your clutter folder
@@ -35,7 +35,5 @@
 #SBATCH --mail-user=logan.b.smith@vanderbilt.edu
 
 #now run normal batch commands
-module restore BWASAM
 module load picard/2.18.27
-java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=chr21_sorted.bam O=chr21_sorted_rmdup.bam REMOVE_DUPLICATES=true M=chr21_sorted_rmdup.txt
-samtools index chr21_sorted_rmdup.bam
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=realigned_possorted.bam O=realigned_possorted_rmdup.bam REMOVE_DUPLICATES=true M=realigned_possorted_rmdup.txt
