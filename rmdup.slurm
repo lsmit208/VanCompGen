@@ -36,4 +36,4 @@
 
 #now run normal batch commands
 module load picard/2.18.27
-java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=realigned_possorted.bam O=realigned_possorted_rmdup.bam REMOVE_DUPLICATES=true M=realigned_possorted_rmdup.txt
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates I=possorted_realigned.bam O=possorted_realigned_rmdup.bam REMOVE_DUPLICATES=true M=possorted_realigned_rmdup.txt
