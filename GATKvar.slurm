@@ -36,4 +36,4 @@
 
 #now run normal batch commands
 module load GCCcore/.8.2.0 GATK/4.1.2.0-Java-1.8.0_192
-gatk HaplotypeCaller -R refdata_hg19_chr21/fasta/genome.fa -I possorted_bam_chr21.bam -O GATKcalls.vcf
+gatk HaplotypeCaller -R refdata_hg19_chr21/fasta/genome.fa -I possorted_realigned_rmdup.bam -O GATKcalls.vcf
