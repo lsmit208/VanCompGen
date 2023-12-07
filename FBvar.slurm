@@ -34,4 +34,4 @@
 #SBATCH --mail-user=logan.b.smith@vanderbilt.edu
 
 #now run normal batch commands
-smallVar_callers/freebayes/bin/freebayes -f refdata_hg19_chr21/fasta/genome.fa possorted_bam_chr21.bam > FBcalls.vcf
+freebayes/bin/freebayes -f refdata_hg19_chr21/fasta/genome.fa possorted_realigned_rmdup.bam > FBcalls.vcf
