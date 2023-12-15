@@ -35,7 +35,7 @@
 #SBATCH --mail-user=logan.b.smith@vanderbilt.edu
 
 #now run normal batch commands
+module load picard/2.18.27
 java -jar $EBROOTPICARD/picard.jar SamToFastq I=<possorted_bam_chr21.bam> FASTQ=<filemap_1.fq> SECOND_END_FASTQ=<filemap_2.fq>
-
 module restore BWASAM
 bwa mem -M -t 4 refdata_hg19_chr21/fasta/genome.fa filemap1.fastq filemap2.fastq > realigned.sam
